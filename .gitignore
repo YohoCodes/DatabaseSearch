@@ -1,0 +1,3 @@
+venv/
+operations/__pycache__/
+train.csv
