@@ -1,23 +1,22 @@
-altair==5.5.0
-appnope==0.1.4
-asttokens==3.0.0
-attrs==25.3.0
-blinker==1.9.0
-cachetools==6.1.0
-certifi==2025.6.15
-charset-normalizer==3.4.2
-click==8.2.1
-comm==0.2.2
-debugpy==1.8.14
-decorator==5.2.1
-executing==2.2.0
-filelock==3.18.0
-fsspec==2025.5.1
-gitdb==4.0.12
-GitPython==3.1.44
-hf-xet==1.1.5
-huggingface-hub==0.33.0
-idna==3.10
+# Core dependencies
+pandas>=1.5.0
+numpy>=1.23.0
+streamlit>=1.30.0
+sentence-transformers>=2.2.0
+
+# Config handling
+pyyaml>=6.0
+
+# Testing
+pytest>=7.0.0
+
+# Code quality
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Type stubs for better type checking
+types-PyYAML>=6.0.0
 ipykernel==6.29.5
 ipython==9.3.0
 ipython_pygments_lexers==1.1.1
