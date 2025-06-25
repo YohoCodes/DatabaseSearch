@@ -38,7 +38,7 @@ class Config:
                 raise FileNotFoundError(f"Configuration file not found: {self.config_path}")
                 
             with open(self.config_path, 'r') as file:
-                return yaml.safe_load(file)
+                return yaml.safe_load(file) or {}
         except yaml.YAMLError as e:
             raise yaml.YAMLError(f"Error parsing configuration file: {str(e)}")
     
