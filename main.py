@@ -91,7 +91,7 @@ def create_search_engine(config: Config, dataset_name: str) -> Search:
         res_columns = dataset_config.get("default_result_columns", [by_column])
         
         # Check if result is same as by_column
-        by_equal_res = by_column == res_columns
+        by_equal_res = len(res_columns) == 1 and res_columns[0] == by_column
         
         # Create and return search engine
         return Search(
