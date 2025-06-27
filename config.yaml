@@ -1,0 +1,55 @@
+# Configuration for the SearchEngine application
+
+# Search engine settings
+search_engine:
+  # Default search engine type (must match CSV filename)
+  type: "Amazon"
+  
+  # Default columns to search by
+  by_column: "TITLE"
+  
+  # Number of results to show
+  num_results: 5
+
+# Data settings
+datasets:
+  # Amazon dataset column configurations
+  amazon:
+    file: "Amazon.csv"
+    columns:
+      - "PRODUCT_ID"
+      - "TITLE"
+      - "BULLET_POINTS"
+      - "DESCRIPTION"
+      - "PRODUCT_TYPE_ID"
+      - "PRODUCT_LENGTH"
+    default_result_columns:
+      - "BULLET_POINTS"
+      - "DESCRIPTION"
+      - "PRODUCT_LENGTH"
+  
+  # Seth Godin dataset column configurations  
+  sethgodin:
+    file: "SethGodin.csv"
+    columns:
+      - "id"
+      - "url"
+      - "title"
+      - "content_plain"
+      - "content_html"
+      - "stars"
+      - "publication-date"
+      - "referral-url"
+    default_result_columns:
+      - "title"
+      - "content_plain"
+      - "publication-date"
+
+# Model settings
+model:
+  # Sentence transformer model to use
+  name: "all-MiniLM-L6-v2"
+  
+  # Cache embeddings to disk for faster startup
+  cache_embeddings: true
+  cache_dir: ".cache"
